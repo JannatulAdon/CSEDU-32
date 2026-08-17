@@ -59,6 +59,7 @@
     .header {
       background: var(--card-bg);
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--card-border);
       border-radius: 24px;
       padding: 2.5rem 2rem;
@@ -180,6 +181,7 @@
       gap: 0.5rem;
       background: rgba(15, 23, 42, 0.75);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       padding: 0.5rem;
       border-radius: 18px;
       border: 1px solid var(--card-border);
@@ -188,6 +190,15 @@
       top: 1rem;
       z-index: 40;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .tabs-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .tabs-nav::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
     }
 
     .tab-btn {
@@ -236,6 +247,7 @@
     .award-card {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       padding: 1.5rem;
@@ -312,6 +324,7 @@
     .syndicate-card {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       padding: 1.5rem;
@@ -498,40 +511,11 @@
       color: #ec4899;
     }
 
-    /* Voice Notes Jukebox */
-    .audio-jukebox {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .audio-card {
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .audio-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .audio-card audio {
-      width: 100%;
-      height: 38px;
-      outline: none;
-    }
-
     /* Leaderboard Table */
     .table-container {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       overflow: hidden;
@@ -556,7 +540,7 @@
       border-radius: 10px;
       font-family: var(--font-main);
       font-size: 0.9rem;
-      width: 260px;
+      width: 280px;
       outline: none;
       transition: border 0.2s;
     }
@@ -579,7 +563,7 @@
 
     th {
       background: rgba(15, 23, 42, 0.95);
-      padding: 0.85rem 1.25rem;
+      padding: 0.85rem 1rem;
       color: var(--text-dim);
       font-weight: 700;
       text-transform: uppercase;
@@ -591,40 +575,160 @@
       cursor: pointer;
       user-select: none;
       white-space: nowrap;
+      transition: color 0.15s;
     }
 
     th:hover {
       color: #fff;
+      background: rgba(255, 255, 255, 0.05);
     }
 
     td {
-      padding: 0.9rem 1.25rem;
+      padding: 0.85rem 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       white-space: nowrap;
     }
 
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.03);
+    .participant-row {
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .participant-row:hover td {
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    .user-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .user-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      color: #fff;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .user-name-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-name {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.925rem;
+      transition: color 0.15s;
+    }
+
+    .participant-row:hover .user-name {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+
+    .user-sub {
+      font-size: 0.75rem;
+      color: var(--text-dim);
     }
 
     .rank-cell {
       font-family: var(--font-mono);
       font-weight: 700;
       color: var(--text-dim);
-      width: 40px;
+      width: 45px;
     }
 
-    .rank-1 { color: #fbbf24 !important; }
-    .rank-2 { color: #cbd5e1 !important; }
-    .rank-3 { color: #d97706 !important; }
-
-    .name-cell {
-      font-weight: 600;
-      color: #fff;
-    }
+    .rank-1 { color: #fbbf24 !important; font-weight: 800; }
+    .rank-2 { color: #cbd5e1 !important; font-weight: 800; }
+    .rank-3 { color: #d97706 !important; font-weight: 800; }
 
     .mono-cell {
       font-family: var(--font-mono);
+    }
+
+    .archetype-pill {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      color: #c084fc;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .emoji-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+    }
+
+    .view-profile-btn {
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .view-profile-btn:hover {
+      background: var(--accent-blue);
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+    }
+
+    .sort-icon {
+      color: var(--accent-cyan);
+      font-size: 0.75rem;
+    }
+
+    /* Charts Grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .chart-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 260px;
+      width: 100%;
     }
 
     /* Hall of Fame */
@@ -637,6 +741,7 @@
     .hof-card {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--card-border);
       border-radius: 18px;
       padding: 1.35rem;
@@ -725,6 +830,7 @@
     .share-box {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       padding: 1.5rem;
@@ -765,109 +871,234 @@
       opacity: 0.9;
     }
 
-    /* Modal for user profile */
+    /* Profile Modal Popup */
     .modal-backdrop {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(8px);
-      z-index: 100;
+      background: rgba(4, 7, 14, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 1000;
       justify-content: center;
       align-items: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.active {
+      display: flex !important;
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .modal-card {
-      background: #111827;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: linear-gradient(145deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 24px;
-      max-width: 600px;
+      max-width: 680px;
       width: 100%;
-      max-height: 90vh;
+      max-height: 88vh;
       overflow-y: auto;
       padding: 2rem;
       position: relative;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      transform: scale(0.94) translateY(10px);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.active .modal-card {
+      transform: scale(1) translateY(0);
     }
 
     .close-modal {
       position: absolute;
       top: 1.25rem;
       right: 1.25rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #fff;
-      width: 32px;
-      height: 32px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      line-height: 1;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
     }
 
-    .user-profile-title {
+    .close-modal:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+      transform: rotate(90deg);
+    }
+
+    .profile-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 1.25rem;
+    }
+
+    .profile-avatar-large {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px -4px rgba(59, 130, 246, 0.4);
+      flex-shrink: 0;
+    }
+
+    .profile-title-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .profile-name {
       font-size: 1.5rem;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 0.25rem;
+      line-height: 1.2;
+      word-break: break-word;
     }
 
-    .archetype-badge {
-      display: inline-block;
-      background: rgba(139, 92, 246, 0.2);
-      border: 1px solid rgba(139, 92, 246, 0.4);
+    .profile-archetype-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
       color: #c084fc;
       padding: 0.25rem 0.75rem;
       border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+    }
+
+    .profile-rank-badge {
+      color: var(--text-muted);
+      font-size: 0.825rem;
+      font-weight: 500;
+      margin-top: 0.35rem;
+    }
+
+    .profile-section-heading {
       font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin: 1.25rem 0 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
-    .profile-grid {
+    .profile-stats-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
       gap: 0.75rem;
-      margin: 1rem 0;
     }
 
-    .profile-stat {
+    .profile-stat-box {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .profile-stat-box:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-2px);
     }
 
     .profile-val {
       font-family: var(--font-mono);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #60a5fa;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
     }
 
     .profile-lbl {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 600;
       color: var(--text-dim);
       text-transform: uppercase;
-      margin-top: 0.2rem;
+      letter-spacing: 0.05em;
+      margin-top: 0.3rem;
     }
 
-    .pill-list {
+    .profile-detail-section {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.15rem;
+      margin-top: 1rem;
+    }
+
+    .profile-detail-section h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-emoji-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 0.5rem;
     }
 
-    .pill {
+    .profile-emoji-pill {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--card-border);
-      padding: 0.3rem 0.6rem;
-      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .profile-pill-count {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .profile-quote-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 0.85rem;
       font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      word-break: break-all;
     }
 
     /* Lightbox Modal */
@@ -876,12 +1107,20 @@
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.94);
-      backdrop-filter: blur(12px);
-      z-index: 200;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 2000;
       justify-content: center;
       align-items: center;
-      padding: 1rem;
+      padding: 1.5rem;
       flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .lightbox-modal.active {
+      display: flex !important;
+      opacity: 1;
     }
 
     .lightbox-img {
@@ -889,24 +1128,43 @@
       max-height: 85vh;
       object-fit: contain;
       border-radius: 12px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
     }
 
     .lightbox-close {
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       color: #fff;
-      border: none;
-      font-size: 2rem;
       width: 44px;
       height: 44px;
       border-radius: 50%;
+      font-size: 1.75rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { padding: 1rem 0.5rem; }
+      .header { padding: 1.5rem 1.25rem; border-radius: 18px; }
+      .title { font-size: 1.85rem; }
+      .search-input { width: 100%; }
+      .syndicate-grid { grid-template-columns: 1fr; }
+      .charts-grid { grid-template-columns: 1fr; }
+      .modal-card { padding: 1.25rem; }
+      .profile-avatar-large { width: 50px; height: 50px; font-size: 1.4rem; }
+      .profile-name { font-size: 1.25rem; }
     }
 
     footer {
@@ -1051,7 +1309,26 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>MD Anik Ahmed</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Mohammed Sheikh</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-02 23:55</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:30</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:30</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 21:13</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 01:28</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 01:20</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 22:49</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 19:02</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 18:40</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 23:38</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 14:36</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 00:24</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr><tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 00:24</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>MD Anik Ahmed</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-06 22:58</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Mohammed Sheikh</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-08-02 23:55</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:31</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:30</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 23:30</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 21:13</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 01:28</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-31 01:20</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 22:49</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 19:02</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-30 18:40</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 23:38</td><td><span class='badge' style='color:#a855f7; background:rgba(168,85,247,0.15);'>🚪 LEFT</span></td><td><strong>Anamul Haque Tanvir</strong> left the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 14:36</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Anamul Haque Tanvir</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 00:24</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
+            <tr><td class='mono-cell' style='color:var(--text-dim);'>2026-07-26 00:24</td><td><span class='badge' style='color:#f43f5e; background:rgba(244,63,94,0.15);'>🔨 KICK</span></td><td><strong>Jannatul Ferdous Moumita</strong> removed <span style='color:#ec4899;font-weight:700;'>Abshary Jahin</span> from the group</td></tr>
           </tbody>
         </table>
       </div>
@@ -1070,7 +1347,11 @@
         <h3>🍖 The Treat & Kacchi Syndicate</h3>
         <p class="desc">Who demands treats and promises kacchi the most in the group</p>
         <div class="syndicate-list">
-          <div class='syndicate-item'><span class='name'>1. Anamul Haque Tanvir</span><span class='badge-count'>148 treats called</span></div><div class='syndicate-item'><span class='name'>2. Purnendu Banik</span><span class='badge-count'>29 treats called</span></div><div class='syndicate-item'><span class='name'>3. Shah Md Nazeef Wasit</span><span class='badge-count'>24 treats called</span></div><div class='syndicate-item'><span class='name'>4. Abshary Jahin</span><span class='badge-count'>19 treats called</span></div><div class='syndicate-item'><span class='name'>5. Md. Maruf Hossain</span><span class='badge-count'>14 treats called</span></div>
+          <div class='syndicate-item'><span class='name'>1. Anamul Haque Tanvir</span><span class='badge-count'>148 treats called</span></div>
+          <div class='syndicate-item'><span class='name'>2. Purnendu Banik</span><span class='badge-count'>29 treats called</span></div>
+          <div class='syndicate-item'><span class='name'>3. Shah Md Nazeef Wasit</span><span class='badge-count'>24 treats called</span></div>
+          <div class='syndicate-item'><span class='name'>4. Abshary Jahin</span><span class='badge-count'>19 treats called</span></div>
+          <div class='syndicate-item'><span class='name'>5. Md. Maruf Hossain</span><span class='badge-count'>14 treats called</span></div>
         </div>
       </div>
 
@@ -1078,203 +1359,24 @@
         <h3>📚 The Academic Panic Board</h3>
         <p class="desc">Mentions of exams, quiz, assignments, labs, slides & sir</p>
         <div class="syndicate-list">
-          <div class='syndicate-item'><span class='name'>1. Labib Morol</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>750 panic triggers</span></div><div class='syndicate-item'><span class='name'>2. Abshary Jahin</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>597 panic triggers</span></div><div class='syndicate-item'><span class='name'>3. Anamul Haque Tanvir</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>498 panic triggers</span></div><div class='syndicate-item'><span class='name'>4. Jannatul Ferdous Moumita</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>375 panic triggers</span></div><div class='syndicate-item'><span class='name'>5. Purnendu Banik</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>355 panic triggers</span></div>
+          <div class='syndicate-item'><span class='name'>1. Labib Morol</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>750 panic triggers</span></div>
+          <div class='syndicate-item'><span class='name'>2. Abshary Jahin</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>597 panic triggers</span></div>
+          <div class='syndicate-item'><span class='name'>3. Anamul Haque Tanvir</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>498 panic triggers</span></div>
+          <div class='syndicate-item'><span class='name'>4. Jannatul Ferdous Moumita</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>375 panic triggers</span></div>
+          <div class='syndicate-item'><span class='name'>5. Purnendu Banik</span><span class='badge-count' style='color:#f59e0b; background:rgba(245,158,11,0.1);'>355 panic triggers</span></div>
         </div>
-      </div>
-
-      
       </div>
 
       <div class="syndicate-card">
         <h3>👻 The 3 AM – 4 AM Ghost Squad</h3>
         <p class="desc">Chatting during the bewitching hours when normal people sleep</p>
         <div class="syndicate-list">
-          <div class='syndicate-item'><span class='name'>1. Junayed Ahmed Saad</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>178 3AM msgs</span></div><div class='syndicate-item'><span class='name'>2. Purnendu Banik</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>111 3AM msgs</span></div><div class='syndicate-item'><span class='name'>3. Labib Morol</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>110 3AM msgs</span></div><div class='syndicate-item'><span class='name'>4. Anamul Haque Tanvir</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>105 3AM msgs</span></div><div class='syndicate-item'><span class='name'>5. Shah Md Nazeef Wasit</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>80 3AM msgs</span></div>
+          <div class='syndicate-item'><span class='name'>1. Junayed Ahmed Saad</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>178 3AM msgs</span></div>
+          <div class='syndicate-item'><span class='name'>2. Purnendu Banik</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>111 3AM msgs</span></div>
+          <div class='syndicate-item'><span class='name'>3. Labib Morol</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>110 3AM msgs</span></div>
+          <div class='syndicate-item'><span class='name'>4. Anamul Haque Tanvir</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>105 3AM msgs</span></div>
+          <div class='syndicate-item'><span class='name'>5. Shah Md Nazeef Wasit</span><span class='badge-count' style='color:#c084fc; background:rgba(192,132,252,0.1);'>80 3AM msgs</span></div>
         </div>
-      </div>
-    </div>
-
-    <!-- Voice Notes Jukebox -->
-    <div class="table-container" style="padding:1.5rem; margin-top:2rem;">
-      <div class="section-title" style="margin-bottom:0.5rem;">
-        <span class="icon">🎙️</span>
-        <span>The Group Voice Note Station (19 Recordings)</span>
-      </div>
-      <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:1.25rem;">Press play to listen directly to the audio notes sent in the group!</p>
-      
-      <div class="audio-jukebox">
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Rakib Sarker</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-03-16 22:12</span>
-          </div>
-          <audio controls src='audio/1736459941069448.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: ❤️‍🩹 😆 😆 😢 😆 😞 😆</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Mehrab Murshad</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-03-20 18:51</span>
-          </div>
-          <audio controls src='audio/1610771123582600.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 😆</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Jannatul Adon</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-04-19 14:54</span>
-          </div>
-          <audio controls src='audio/1476779877408841.ogg'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Jannatul Adon</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-04-19 14:56</span>
-          </div>
-          <audio controls src='audio/2007172399837427.ogg'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: ❤ 👍 👍</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Jannatul Adon</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-04-19 21:29</span>
-          </div>
-          <audio controls src='audio/925381980374106.ogg'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: ❤ 👍</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Md Nabil Hasan</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-04-24 20:51</span>
-          </div>
-          <audio controls src='audio/791791907098431.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Hamim Ashab</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-04-28 17:23</span>
-          </div>
-          <audio controls src='audio/938899662355136.ogg'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 😆</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Labib Morol</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-05 20:57</span>
-          </div>
-          <audio controls src='audio/1419332166662364.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Shah Md Nazeef Wasit</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-05 20:59</span>
-          </div>
-          <audio controls src='audio/1279834934329906.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Shah Md Nazeef Wasit</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-05 21:02</span>
-          </div>
-          <audio controls src='audio/3524832537664929.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Labib Morol</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-11 21:41</span>
-          </div>
-          <audio controls src='audio/1021824486842526.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 😆 😆 😆 😆 😆 😆 😆 😆 😆</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Labib Morol</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-25 20:26</span>
-          </div>
-          <audio controls src='audio/1644926100117040.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>MD Anik Ahmed</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-05-27 20:46</span>
-          </div>
-          <audio controls src='audio/1054714283876701.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 😆 😆</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Hamim Ashab</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-06-30 13:01</span>
-          </div>
-          <audio controls src='audio/899662939113159.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Mushfik Ahmad</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-07-11 19:12</span>
-          </div>
-          <audio controls src='audio/2025313821407921.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Mushfik Ahmad</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-07-11 19:14</span>
-          </div>
-          <audio controls src='audio/1454654249757489.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 😮</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Ayham Saad Hossain</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-07-29 12:51</span>
-          </div>
-          <audio controls src='audio/2096820327884819.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Md Nabil Hasan</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-07-29 13:45</span>
-          </div>
-          <audio controls src='audio/3234012790116723.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>No reactions</div>
-        </div>
-        
-        <div class='audio-card'>
-          <div class='audio-card-top'>
-            <span style='font-weight:700; color:#60a5fa;'>Abid Hasan</span>
-            <span style='font-size:0.75rem; color:var(--text-dim);'>2026-08-03 23:07</span>
-          </div>
-          <audio controls src='audio/1061440310166056.mp4'></audio>
-          <div style='font-size:0.8rem; color:var(--text-dim); display:flex; gap:0.25rem;'>Reactions: 🤣 😆 🤲 😆</div>
-        </div>
-        
       </div>
     </div>
   </div>
@@ -1287,9 +1389,9 @@
     </div>
     
     <div class="filter-chips">
-      <button class="filter-chip active" onclick="filterGallery('all')">All Media</button>
-      <button class="filter-chip" onclick="filterGallery('photo')">🖼️ Photos</button>
-      <button class="filter-chip" onclick="filterGallery('gif')">👾 GIFs</button>
+      <button class="filter-chip active" onclick="filterGallery('all', this)">All Media</button>
+      <button class="filter-chip" onclick="filterGallery('photo', this)">🖼️ Photos</button>
+      <button class="filter-chip" onclick="filterGallery('gif', this)">👾 GIFs</button>
     </div>
 
     <div class="gallery-grid" id="gallery-container"></div>
@@ -1301,7 +1403,7 @@
       <div class="table-header-controls">
         <div class="section-title" style="margin-bottom:0;">
           <span class="icon">📊</span>
-          <span>Participant Statistics</span>
+          <span>Participant Statistics (<span id="participantCount">55</span> Members)</span>
         </div>
         <input type="text" id="tableSearch" class="search-input" placeholder="Search participant..." oninput="filterTable()">
       </div>
@@ -1309,19 +1411,19 @@
         <table id="statsTable">
           <thead>
             <tr>
-              <th onclick="sortTable(0)">#</th>
-              <th onclick="sortTable(1)">Member</th>
-              <th onclick="sortTable(2)">Archetype</th>
-              <th onclick="sortTable(3)">Messages</th>
-              <th onclick="sortTable(4)">Share %</th>
-              <th onclick="sortTable(5)">Words</th>
-              <th onclick="sortTable(6)">Avg W/M</th>
-              <th onclick="sortTable(7)">Emojis</th>
-              <th onclick="sortTable(8)">Photos</th>
-              <th onclick="sortTable(9)">Unsent</th>
-              <th onclick="sortTable(10)">Reacts Given</th>
-              <th onclick="sortTable(11)">Reacts Recv</th>
-              <th onclick="sortTable(12)">Night %</th>
+              <th onclick="sortTable('rank')"># <span id="sort-rank" class="sort-icon">▲</span></th>
+              <th onclick="sortTable('name')">Member <span id="sort-name" class="sort-icon"></span></th>
+              <th onclick="sortTable('archetype')">Archetype <span id="sort-archetype" class="sort-icon"></span></th>
+              <th onclick="sortTable('messages')">Messages <span id="sort-messages" class="sort-icon"></span></th>
+              <th onclick="sortTable('percentage')">Share % <span id="sort-percentage" class="sort-icon"></span></th>
+              <th onclick="sortTable('words')">Words <span id="sort-words" class="sort-icon"></span></th>
+              <th onclick="sortTable('avg_words_per_msg')">Avg W/M <span id="sort-avg_words_per_msg" class="sort-icon"></span></th>
+              <th onclick="sortTable('photos')">Photos <span id="sort-photos" class="sort-icon"></span></th>
+              <th onclick="sortTable('reacts_received')">Reacts Recv (+) <span id="sort-reacts_received" class="sort-icon"></span></th>
+              <th onclick="sortTable('reacts_given')">Reacts Given (-) <span id="sort-reacts_given" class="sort-icon"></span></th>
+              <th onclick="sortTable('night_msgs')">Night Msgs <span id="sort-night_msgs" class="sort-icon"></span></th>
+              <th>Top Emoji</th>
+              <th>Profile</th>
             </tr>
           </thead>
           <tbody id="tableBody"></tbody>
@@ -1377,7 +1479,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class='rank-cell'>1</td><td><strong>2026-05-11</strong></td><td>Monday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,379 msgs</td></tr><tr><td class='rank-cell'>2</td><td><strong>2026-07-20</strong></td><td>Monday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,080 msgs</td></tr><tr><td class='rank-cell'>3</td><td><strong>2026-05-21</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,035 msgs</td></tr><tr><td class='rank-cell'>4</td><td><strong>2026-07-30</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>938 msgs</td></tr><tr><td class='rank-cell'>5</td><td><strong>2026-07-15</strong></td><td>Wednesday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>929 msgs</td></tr><tr><td class='rank-cell'>6</td><td><strong>2026-07-17</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>878 msgs</td></tr><tr><td class='rank-cell'>7</td><td><strong>2026-07-04</strong></td><td>Saturday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>874 msgs</td></tr><tr><td class='rank-cell'>8</td><td><strong>2026-07-19</strong></td><td>Sunday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>838 msgs</td></tr><tr><td class='rank-cell'>9</td><td><strong>2026-07-31</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>818 msgs</td></tr><tr><td class='rank-cell'>10</td><td><strong>2026-05-15</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>803 msgs</td></tr><tr><td class='rank-cell'>11</td><td><strong>2026-05-20</strong></td><td>Wednesday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>792 msgs</td></tr><tr><td class='rank-cell'>12</td><td><strong>2026-07-16</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>768 msgs</td></tr>
+            <tr><td class='rank-cell'>1</td><td><strong>2026-05-11</strong></td><td>Monday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,379 msgs</td></tr>
+            <tr><td class='rank-cell'>2</td><td><strong>2026-07-20</strong></td><td>Monday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,080 msgs</td></tr>
+            <tr><td class='rank-cell'>3</td><td><strong>2026-05-21</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>1,035 msgs</td></tr>
+            <tr><td class='rank-cell'>4</td><td><strong>2026-07-30</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>938 msgs</td></tr>
+            <tr><td class='rank-cell'>5</td><td><strong>2026-07-15</strong></td><td>Wednesday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>929 msgs</td></tr>
+            <tr><td class='rank-cell'>6</td><td><strong>2026-07-17</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>878 msgs</td></tr>
+            <tr><td class='rank-cell'>7</td><td><strong>2026-07-04</strong></td><td>Saturday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>874 msgs</td></tr>
+            <tr><td class='rank-cell'>8</td><td><strong>2026-07-19</strong></td><td>Sunday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>838 msgs</td></tr>
+            <tr><td class='rank-cell'>9</td><td><strong>2026-07-31</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>818 msgs</td></tr>
+            <tr><td class='rank-cell'>10</td><td><strong>2026-05-15</strong></td><td>Friday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>803 msgs</td></tr>
+            <tr><td class='rank-cell'>11</td><td><strong>2026-05-20</strong></td><td>Wednesday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>792 msgs</td></tr>
+            <tr><td class='rank-cell'>12</td><td><strong>2026-07-16</strong></td><td>Thursday</td><td class='mono-cell' style='color:#38bdf8;font-weight:700;'>768 msgs</td></tr>
           </tbody>
         </table>
       </div>
@@ -1400,151 +1513,149 @@
       <span>Top Hype Duos (Who reacts to whom the most)</span>
     </div>
     <div class="hof-grid">
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#1 Duo Match</div>
+          <div class='hof-count'>653 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Anamul Haque Tanvir</span>
+        </div>
+      </div>
       
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#1 Duo Match</div>
-            <div class='hof-count'>653 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Anamul Haque Tanvir</span>
-          </div>
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#2 Duo Match</div>
+          <div class='hof-count'>354 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#2 Duo Match</div>
-            <div class='hof-count'>354 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Rubayet Mahmud</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Rubayet Mahmud</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#3 Duo Match</div>
-            <div class='hof-count'>346 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Purnendu Banik</span>
-          </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#3 Duo Match</div>
+          <div class='hof-count'>346 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#4 Duo Match</div>
-            <div class='hof-count'>313 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Jannatul Ferdous Moumita</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Purnendu Banik</span>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#5 Duo Match</div>
-            <div class='hof-count'>279 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Labib Morol</span>
-          </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#4 Duo Match</div>
+          <div class='hof-count'>313 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#6 Duo Match</div>
-            <div class='hof-count'>252 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Mohammed Sheikh</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Jannatul Ferdous Moumita</span>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#7 Duo Match</div>
-            <div class='hof-count'>246 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Anamul Haque Tanvir</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
-          </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#5 Duo Match</div>
+          <div class='hof-count'>279 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#8 Duo Match</div>
-            <div class='hof-count'>240 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Rubayet Mahmud</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Anamul Haque Tanvir</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Labib Morol</span>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#9 Duo Match</div>
-            <div class='hof-count'>236 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Mohammed Sheikh</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
-          </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#6 Duo Match</div>
+          <div class='hof-count'>252 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#10 Duo Match</div>
-            <div class='hof-count'>232 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Anamul Haque Tanvir</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Jannatul Ferdous Moumita</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Mohammed Sheikh</span>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#11 Duo Match</div>
-            <div class='hof-count'>230 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Mohammed Sheikh</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Labib Morol</span>
-          </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#7 Duo Match</div>
+          <div class='hof-count'>246 reacts ❤️</div>
         </div>
-        
-        <div class='hof-card'>
-          <div class='hof-top'>
-            <div class='hof-sender'>#12 Duo Match</div>
-            <div class='hof-count'>215 reacts ❤️</div>
-          </div>
-          <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
-            <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
-            <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
-            <span style='color:#ec4899; font-weight:700;'>Rubayet Mahmud</span>
-          </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Anamul Haque Tanvir</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
         </div>
-        
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#8 Duo Match</div>
+          <div class='hof-count'>240 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Rubayet Mahmud</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Anamul Haque Tanvir</span>
+        </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#9 Duo Match</div>
+          <div class='hof-count'>236 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Mohammed Sheikh</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Abshary Jahin</span>
+        </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#10 Duo Match</div>
+          <div class='hof-count'>232 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Anamul Haque Tanvir</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Jannatul Ferdous Moumita</span>
+        </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#11 Duo Match</div>
+          <div class='hof-count'>230 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Mohammed Sheikh</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Labib Morol</span>
+        </div>
+      </div>
+      
+      <div class='hof-card'>
+        <div class='hof-top'>
+          <div class='hof-sender'>#12 Duo Match</div>
+          <div class='hof-count'>215 reacts ❤️</div>
+        </div>
+        <div class='hof-content' style='font-size:1.05rem; text-align:center;'>
+          <span style='color:#38bdf8; font-weight:700;'>Abshary Jahin</span>
+          <br><span style='color:var(--text-dim); font-size:0.85rem;'>hyped up</span><br>
+          <span style='color:#ec4899; font-weight:700;'>Rubayet Mahmud</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1559,45 +1670,45 @@
     <div class="share-box">
       <h3 style="margin-bottom:0.5rem; color:#fff;">⚔️ CR Moumita's Ban Hammer & Court of Justice</h3>
       <pre id="snippet-court" class="snippet-pre"></pre>
-      <button class="copy-btn" onclick="copySnippet('snippet-court')">📋 Copy Ban Hammer Stats</button>
+      <button class="copy-btn" onclick="copySnippet('snippet-court', this)">📋 Copy Ban Hammer Stats</button>
     </div>
 
     <div class="share-box">
       <h3 style="margin-bottom:0.5rem; color:#fff;">🏆 The Official Group Superlatives</h3>
       <pre id="snippet-superlatives" class="snippet-pre"></pre>
-      <button class="copy-btn" onclick="copySnippet('snippet-superlatives')">📋 Copy Superlatives</button>
+      <button class="copy-btn" onclick="copySnippet('snippet-superlatives', this)">📋 Copy Superlatives</button>
     </div>
 
     <div class="share-box">
       <h3 style="margin-bottom:0.5rem; color:#fff;">🍖 The Treat & Panic Syndicate</h3>
       <pre id="snippet-banter" class="snippet-pre"></pre>
-      <button class="copy-btn" onclick="copySnippet('snippet-banter')">📋 Copy Treat & Panic Stats</button>
+      <button class="copy-btn" onclick="copySnippet('snippet-banter', this)">📋 Copy Treat & Panic Stats</button>
     </div>
 
     <div class="share-box">
       <h3 style="margin-bottom:0.5rem; color:#fff;">📊 Top 10 Spammers (Message Count)</h3>
       <pre id="snippet-top10" class="snippet-pre"></pre>
-      <button class="copy-btn" onclick="copySnippet('snippet-top10')">📋 Copy Top 10 Leaderboard</button>
+      <button class="copy-btn" onclick="copySnippet('snippet-top10', this)">📋 Copy Top 10 Leaderboard</button>
     </div>
 
     <div class="share-box">
       <h3 style="margin-bottom:0.5rem; color:#fff;">😭 The Emoji & Reaction Awards</h3>
       <pre id="snippet-emojis" class="snippet-pre"></pre>
-      <button class="copy-btn" onclick="copySnippet('snippet-emojis')">📋 Copy Emoji & Clout Stats</button>
+      <button class="copy-btn" onclick="copySnippet('snippet-emojis', this)">📋 Copy Emoji & Clout Stats</button>
     </div>
   </div>
 
-  <!-- Profile Modal -->
-  <div id="profileModal" class="modal-backdrop" onclick="closeModal(event)">
+  <!-- Profile Modal Popup -->
+  <div id="profileModal" class="modal-backdrop" onclick="closeModal()">
     <div class="modal-card" onclick="event.stopPropagation()">
-      <button class="close-modal" onclick="closeModalDirect()">&times;</button>
+      <button class="close-modal" onclick="closeModal()" aria-label="Close modal">&times;</button>
       <div id="modalBody"></div>
     </div>
   </div>
 
   <!-- Lightbox Modal -->
   <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
-    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image preview">&times;</button>
     <img id="lightboxImg" class="lightbox-img" src="" alt="Full Resolution Image" onclick="event.stopPropagation()">
   </div>
 

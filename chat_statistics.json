@@ -641,28 +641,6 @@
         "count": 4
       }
     ],
-    "vai_addicts": [
-      {
-        "name": "Anamul Haque Tanvir",
-        "count": 707
-      },
-      {
-        "name": "Abshary Jahin",
-        "count": 342
-      },
-      {
-        "name": "Jannatul Ferdous Moumita",
-        "count": 282
-      },
-      {
-        "name": "Junayed Ahmed Saad",
-        "count": 191
-      },
-      {
-        "name": "Mohammed Sheikh",
-        "count": 159
-      }
-    ],
     "panic_scholars": [
       {
         "name": "Labib Morol",
@@ -4032,7 +4010,8 @@
       "active_days_count": 152,
       "max_msg_len": 278,
       "longest_msg_preview": "https://www.bbc.com/bengali/extra/aimee860o7/36-days-of-july-revolution-in-bangladesh?fbclid=IwY2xjawSyBaRleHRuA2FlbQIxMABicmlkETEzdWNGMkx2dTV2d2d0RlR6c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrEekvQn3",
-      "archetype": "Supreme Chat Titan 👑"
+      "archetype": "Supreme Chat Titan 👑",
+      "rank": 1
     },
     {
       "name": "Abshary Jahin",
@@ -4118,7 +4097,8 @@
       "active_days_count": 124,
       "max_msg_len": 1800,
       "longest_msg_preview": "😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭",
-      "archetype": "Supreme Chat Titan 👑"
+      "archetype": "Supreme Chat Titan 👑",
+      "rank": 2
     },
     {
       "name": "Shah Md Nazeef Wasit",
@@ -4204,7 +4184,8 @@
       "active_days_count": 161,
       "max_msg_len": 781,
       "longest_msg_preview": "We're RootNode 32, not flawless, but we’re very persistent and very carefree. Somewhere between broken code and broken sleep, we found our roots. \nWe've debugged more relationships than programs and l",
-      "archetype": "Group Pillar 🏛️"
+      "archetype": "Group Pillar 🏛️",
+      "rank": 3
     },
     {
       "name": "Labib Morol",
@@ -4290,7 +4271,8 @@
       "active_days_count": 157,
       "max_msg_len": 1415,
       "longest_msg_preview": "class Solution {\npublic:\n\n    bool isSafe(vector<vector<char>>& board, int row, int col, char num) {\n\n        // Row check\n        for(int j = 0; j < 9; j++) {\n            if(board[row][j] == num) ret",
-      "archetype": "Group Pillar 🏛️"
+      "archetype": "Group Pillar 🏛️",
+      "rank": 4
     },
     {
       "name": "Mohammed Sheikh",
@@ -4376,7 +4358,8 @@
       "active_days_count": 150,
       "max_msg_len": 1694,
       "longest_msg_preview": "Engineering-\n1. CSE\nLink: \nhttps://m.me/j/AbbNMcyvTQy315ew/?send_source=gc%3Acopy_invite_link_c\nID: https://www.facebook.com/mehrabmurshad\n\n2. EEE\nLink: https://m.me/j/AbZuY4mq2OzZAYzM/\nID: https://ww",
-      "archetype": "Group Pillar 🏛️"
+      "archetype": "Group Pillar 🏛️",
+      "rank": 5
     },
     {
       "name": "Purnendu Banik",
@@ -4462,7 +4445,8 @@
       "active_days_count": 129,
       "max_msg_len": 7400,
       "longest_msg_preview": "অসম্ভব প্রেমের পশ্চাতে কালক্ষেপ\nমনুষ্যজীবনে যে সমস্ত ভ্রান্তি অনিবার্যরূপে আসিয়া উপস্থিত হয়, তাহাদের মধ্যে অসম্ভব প্রেমের পশ্চাতে কালহরণ বোধ করি সর্বাপেক্ষা করুণ ও সর্বাপেক্ষা মধুর।\nমানুষের উচিত নিজ",
-      "archetype": "Group Pillar 🏛️"
+      "archetype": "Group Pillar 🏛️",
+      "rank": 6
     },
     {
       "name": "Jannatul Ferdous Moumita",
@@ -4548,7 +4532,8 @@
       "active_days_count": 132,
       "max_msg_len": 1586,
       "longest_msg_preview": "📸 Photography Contest Begins — CSEDU Annual Picnic 2026 Edition! 🎉\n\nHello, CSEDU!\n\nPicnic season is back, and you know what that means — colors, moments, laughter, and memories worth capturing! 🌅✨\nTo ",
-      "archetype": "Supreme CR & Ban Hammer 🔨"
+      "archetype": "Supreme CR & Ban Hammer 🔨",
+      "rank": 7
     },
     {
       "name": "Md Nabil Hasan",
@@ -4634,7 +4619,8 @@
       "active_days_count": 146,
       "max_msg_len": 2074,
       "longest_msg_preview": "আমাদের ব্যক্তিগত ডেটা কতটা নিরাপদ?\n\nবাংলাদেশে সাম্প্রতিক সময়ে একাধিক ডেটা লিক এবং পরিচয় চুরির ঘটনা আমাদের একটি বাস্তব সমস্যার দিকে ইঙ্গিত করছে। শপিং প্ল্যাটফর্মের কাস্টমার ডেটা, এনআইডি তথ্য ফাঁস, এবং ",
-      "archetype": "Panic Scholar 📚"
+      "archetype": "Panic Scholar 📚",
+      "rank": 8
     },
     {
       "name": "Junayed Ahmed Saad",
@@ -4720,7 +4706,8 @@
       "active_days_count": 114,
       "max_msg_len": 521,
       "longest_msg_preview": "ভাবছি আজ রানা স্যারের কথায় প্ররোচিত হয়ে বাংলা ভাষার প্রতি মর্যাদা প্রদর্শন স্বরুপ গণনাযন্ত্র বিজ্ঞান ও প্রকৈশল বিষয় থেকে ইস্তফা নিবো। বাংলাভাষী হবার দরুণ বাংলার প্রতি শেকড়ের একটা অকৃত্রিম টান অনুভব কর",
-      "archetype": "Vampiric Night Owl 🦉"
+      "archetype": "Vampiric Night Owl 🦉",
+      "rank": 9
     },
     {
       "name": "Jakia Nusrat Kamal Era",
@@ -4806,7 +4793,8 @@
       "active_days_count": 113,
       "max_msg_len": 826,
       "longest_msg_preview": "📢 **Call for Applications | IEEE Computer Society Student Branch Chapter, DU**\n\nAttention University of Dhaka students!\n\nApplications are now open for recruitment to the **IEEE Computer Society Studen",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 10
     },
     {
       "name": "MD Anik Ahmed",
@@ -4892,7 +4880,8 @@
       "active_days_count": 147,
       "max_msg_len": 408,
       "longest_msg_preview": "আমরা যারা CR হতে চাই আমাদের অবশ্যই মাথায় রাখতে হবে CR হল সহপাঠিদের  রিপ্রেজেন্টেটিভ। কাইন্ড অফ শিক্ষক ও শিক্ষার্থীদের মাঝখানে একটা মিডিয়াম। আমাদের সকলের সমস্যা +অসুবিধা শিক্ষকদের কাছে তুলে ধরতে  হবে",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 11
     },
     {
       "name": "Rubayet Mahmud",
@@ -4978,7 +4967,8 @@
       "active_days_count": 138,
       "max_msg_len": 215,
       "longest_msg_preview": "Tmi yearly income a ki just 12 months er salary dico?  Amader to form fill up er somoy monthly income chaicilo... Pore otak 12 diya gun kre annual income krse... But annual income a to bonus gulao inc",
-      "archetype": "Vampiric Night Owl 🦉"
+      "archetype": "Vampiric Night Owl 🦉",
+      "rank": 12
     },
     {
       "name": "Ayham Saad Hossain",
@@ -5064,7 +5054,8 @@
       "active_days_count": 141,
       "max_msg_len": 403,
       "longest_msg_preview": "for example: induction porsi 1 month age, and structural induction porsi 2 weeks age. since ami induction motamuti bujhchhi, strong induction bujhhchi, ami nije nije math solve korte parbo mukhostho n",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 13
     },
     {
       "name": "Md. Maruf Hossain",
@@ -5150,7 +5141,8 @@
       "active_days_count": 122,
       "max_msg_len": 3369,
       "longest_msg_preview": "ঢাকা বিশ্ববিদ্যালয়ের অনাবাসিক শিক্ষার্থীদের কথা মাথায় রেখে ঢাকা ও আশপাশে ১৭টা রুটে ঢাবির লাল বাস চলাচল করে। তবে এগুলো সারাদিন চলে না এর যাওয়া-আসার নির্দিষ্ট টাইম টেবিল আছে। আবার এই ঢাকা ও আশপাশের জেলা",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 14
     },
     {
       "name": "Tafhim Al-Azmi",
@@ -5236,7 +5228,8 @@
       "active_days_count": 115,
       "max_msg_len": 448,
       "longest_msg_preview": "amader html ta deploy korar shomoy ami shob gula original file deploy kore felsi mistakenly. tai file size onk boro hoye gese.and load hoite onk time nitase.ami tai amader tar sathe ekta pdf o add kor",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 15
     },
     {
       "name": "Hamim Ashab",
@@ -5322,7 +5315,8 @@
       "active_days_count": 123,
       "max_msg_len": 283,
       "longest_msg_preview": "Accha amar babar nam er spelling e Board er website e Md.Elahi ache mane Md. And Elahi er majhe faka nai. Kintu sob certificate e thik ase sudhu web site e sonossa. Kintu etar jonno DU er form e Md.El",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 16
     },
     {
       "name": "Rudrojit Sarkar",
@@ -5408,7 +5402,8 @@
       "active_days_count": 99,
       "max_msg_len": 509,
       "longest_msg_preview": "Final Exam Suggestion:  Graphically, mathematically, circuit--- charging and discharging phase or inductor er storage cycle long ques (optional parts), permittivity, transzient eqn deivate.\n\nViva sugg",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 17
     },
     {
       "name": "Abid Hasan",
@@ -5494,7 +5489,8 @@
       "active_days_count": 104,
       "max_msg_len": 1489,
       "longest_msg_preview": "Hello everyone,\n\nYou will be happy to know that we are going to organize the Intra-Department Football Tournament 2026.\n\n Venue: Central Field, University of Dhaka\n Date: 15th & 16th May 2026\n\nIn this",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 18
     },
     {
       "name": "Safwan Muhtasim",
@@ -5580,7 +5576,8 @@
       "active_days_count": 115,
       "max_msg_len": 323,
       "longest_msg_preview": "Nabil\nSohan\nMoumita\nRaiyan\nPurnendu\nNazeef\nFarabi\nIrfanul\nIndronil \nRudro\nBappy\nAyham\nSayem\nEra\nSaad\nTapu\nNafiz\nMehrab\nAbshary\nShanto\nOhi\nInzamam\nMushfik\nSobuj\nSiam\nMaruf\nMahedi\nRubayet\nANIK\nAdon\nSafw",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 19
     },
     {
       "name": "Mushfik Ahmad",
@@ -5666,7 +5663,8 @@
       "active_days_count": 92,
       "max_msg_len": 789,
       "longest_msg_preview": "এখন পর্যন্ত পাওয়া তথ্য অনুযায়ী এবারও সবচেয়ে বেশি সংখ্যক বিসিএস ক্যাডার হয়েছে ঢাকা বিশ্ববিদ্যালয় (ঢাবি) থেকে। বিশ্ববিদ্যালয়টি থেকে প্রায় ১৫৩ জন প্রার্থী চূড়ান্তভাবে সুপারিশপ্রাপ্ত হয়েছেন। এর আগে ৪৩তম ব",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 20
     },
     {
       "name": "Mehrab Murshad",
@@ -5752,7 +5750,8 @@
       "active_days_count": 127,
       "max_msg_len": 371,
       "longest_msg_preview": "1. Exam Admit - 1 x ( Main+Copy)\n2. SSC Grade Sheet- 2 x Copy\n3. HSC Grade Sheet- 2 x Copy\n4. Passport Size photo- 2 x Copy\n5. HSC Testimonial - 2 x Copy\n6. Father/ Mother Income Certificate - 2 x Cop",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 21
     },
     {
       "name": "Muntasir Joha",
@@ -5838,7 +5837,8 @@
       "active_days_count": 84,
       "max_msg_len": 392,
       "longest_msg_preview": "an example why we shouldn’t blind follow a book. 1) a force of i+2j+3k is applied where r=i+j+k, work? 2) a force of xi+2j+3zk is applied where r1=(2,3,4) and r2=(1,4,6).work? The person who can solve",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 22
     },
     {
       "name": "Irfanul Islam",
@@ -5924,7 +5924,8 @@
       "active_days_count": 91,
       "max_msg_len": 335,
       "longest_msg_preview": "Sir , tomorrow as per our schedule we have only 1 class of yours . Considering tomorrow’s political situation and also huge traffic due to SSC exam overlapping our schedule and bad weather ,under thes",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 23
     },
     {
       "name": "Rakib Sarker",
@@ -6010,7 +6011,8 @@
       "active_days_count": 90,
       "max_msg_len": 683,
       "longest_msg_preview": "Basically Neet paper leak,  এজন্য সোনাম ওয়াংচু একটা অনশন শুরু করেন এবং ধর্মেন্দু মানে ওদের education minister এর পদত্যাগ চায়। সোনাম ওয়াংচু একজন নামকরা বিজ্ঞানী এটা আমাদের সবার জানা। কিন্তু এর আগেও দেশ",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 24
     },
     {
       "name": "Jannatul Adon",
@@ -6092,7 +6094,8 @@
       "active_days_count": 71,
       "max_msg_len": 372,
       "longest_msg_preview": "There will be an offline Team Practice Contest on 20 June, 2026 at 9 A.M. All of the teams formed for the current round are encouraged to participate in this TPC. \n\nRemember that, this is a Team Pract",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 25
     },
     {
       "name": "Ali Hossain",
@@ -6178,7 +6181,8 @@
       "active_days_count": 79,
       "max_msg_len": 159,
       "longest_msg_preview": "Accah, sir je ekdin team wise Ekta exam nisilo, cps theory, oidin chilam na, ekon eita ki CT hisebe count hobe , na class participation, make up Dewar way ase?",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 26
     },
     {
       "name": "Indronil Adhikary",
@@ -6264,7 +6268,8 @@
       "active_days_count": 64,
       "max_msg_len": 155,
       "longest_msg_preview": "Amareo bolo. Amio shuni ke amr crush. Vai amr nam ee Khali rumors Ii chorailo sei school life theke dekhtasi. Ochena ojana pulapan amre koi tr na 10 gf ase",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 27
     },
     {
       "name": "Syh Shanto",
@@ -6350,7 +6355,8 @@
       "active_days_count": 43,
       "max_msg_len": 1489,
       "longest_msg_preview": "Hello everyone,\n\nYou will be happy to know that we are going to organize the Intra-Department Football Tournament 2026.\n\n Venue: Central Field, University of Dhaka\n Date: 15th & 16th May 2026\n\nIn this",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 28
     },
     {
       "name": "Siam Sadad",
@@ -6436,7 +6442,8 @@
       "active_days_count": 43,
       "max_msg_len": 228,
       "longest_msg_preview": "https://science.nasa.gov/specials/your-name-in-landsat/?fbclid=IwdGRjcARYmMpjbGNrBFiYxGV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzI3NTI1NDY5MjU5ODI3OQABHrWhqDN5-Fu2C92DQxpBFleE5-cgPCM3EkqremR7Fknz9c4HBvdRaxPIQim",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 29
     },
     {
       "name": "Mehedi Hasan Bappy",
@@ -6522,7 +6529,8 @@
       "active_days_count": 56,
       "max_msg_len": 153,
       "longest_msg_preview": "Panjabi r upor t-shirt keu porbe nah... T-shirt onno kono din o pora jabe... Panjabi e best hobe i think...maximum panjabi porle... Amio panjabi r pokkhe",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 30
     },
     {
       "name": "Aditi Deb",
@@ -6608,7 +6616,8 @@
       "active_days_count": 12,
       "max_msg_len": 696,
       "longest_msg_preview": "Hello everyone, I have an announcement. I am leaving DU and will be joining BUET. Initially, I thought I might get URP if I chose BUET but I ended up getting NAME instead. I had always hoped to study ",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 31
     },
     {
       "name": "Raiyan Abedin",
@@ -6694,7 +6703,8 @@
       "active_days_count": 38,
       "max_msg_len": 73,
       "longest_msg_preview": "Source transformation korle, 3 ar 9 ohm series e thake, so 3 + 9 = 12 ohm",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 32
     },
     {
       "name": "Facebook user",
@@ -6780,7 +6790,8 @@
       "active_days_count": 20,
       "max_msg_len": 93,
       "longest_msg_preview": "Du r perspective a kew kisu bole naii\nTobe doctor ra bolse\nJehetu ora chup then odr i dosh ig",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 33
     },
     {
       "name": "Muntasir Mubin Joha",
@@ -6858,7 +6869,8 @@
       "active_days_count": 22,
       "max_msg_len": 144,
       "longest_msg_preview": "Tobe CSE theke EEE asholei better, electrical dept. theke computer e switch kora jai. Kintu computer dept. theke electrical e switch kora jai na",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 34
     },
     {
       "name": "Jubair Alam Chowdhury",
@@ -6944,7 +6956,8 @@
       "active_days_count": 27,
       "max_msg_len": 460,
       "longest_msg_preview": "Akta question chilo. Hubble constant mainly frequency er moto. But jodi amra amader theke enough distance er akta galaxy er kotha consider kori, tokhon space c er chaite beshi speed e expand korte par",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 35
     },
     {
       "name": "Zain Farabi",
@@ -7022,7 +7035,8 @@
       "active_days_count": 33,
       "max_msg_len": 85,
       "longest_msg_preview": "Ekushey hall er form e ki keu department chairman/student advisor er sign nite parso?",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 36
     },
     {
       "name": "Md. Ragib Ishraque",
@@ -7108,7 +7122,8 @@
       "active_days_count": 25,
       "max_msg_len": 69,
       "longest_msg_preview": "I think rn receipt jei card ta ache sheita use Korte hobe as id cards",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 37
     },
     {
       "name": "Live updates",
@@ -7169,7 +7184,8 @@
       "active_days_count": 9,
       "max_msg_len": 75,
       "longest_msg_preview": "Jannatul Ferdous Moumita has scheduled live updates for France vs Spain ⚽️.",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 38
     },
     {
       "name": "রূপন্তী সাহা",
@@ -7255,7 +7271,8 @@
       "active_days_count": 25,
       "max_msg_len": 92,
       "longest_msg_preview": "C++ o shikha shesh ei koidin e??\n(Ami to ektu beshie slow mone hoche.pathor juge achi maybe)",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 39
     },
     {
       "name": "SI Sobuj",
@@ -7333,7 +7350,8 @@
       "active_days_count": 22,
       "max_msg_len": 94,
       "longest_msg_preview": "Fazlul hoq hall e giye form joma diye Aslam...pore ora 2 ta kagos diye bollo j kal 10 Tay asio",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 40
     },
     {
       "name": "Mustafizur Nafiz",
@@ -7419,7 +7437,8 @@
       "active_days_count": 18,
       "max_msg_len": 111,
       "longest_msg_preview": "Ami dhakar bahire achi.\n ami hoyto jete parbo na🥲\nSo senior ra jodi ask korle eita kindly janiye dio\n\nRoll : 24",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 41
     },
     {
       "name": "Mahedi Hasan",
@@ -7497,7 +7516,8 @@
       "active_days_count": 18,
       "max_msg_len": 57,
       "longest_msg_preview": "Kew ki lab er aikhane aso naki?ar lab ki 16th  floor ae ?",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 42
     },
     {
       "name": "Serazus Salekin Samin",
@@ -7579,7 +7599,8 @@
       "active_days_count": 10,
       "max_msg_len": 118,
       "longest_msg_preview": "https://docs.google.com/forms/d/e/1FAIpQLSf8-yqoZdIPl6G2RUu2doVVKmgdSRiV9FNC7V7iEPnS84Aq3A/viewform?usp=publish-editor",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 43
     },
     {
       "name": "Jamiralam Sohan",
@@ -7661,7 +7682,8 @@
       "active_days_count": 20,
       "max_msg_len": 212,
       "longest_msg_preview": "৩১ ব্যাচ: একাগ্র'৩১ \n৩০ ব্যাচ: অন্বেষক ত্রিশ \n২৯ ব্যাচ: লুব্ধক'২৯ \n২৮ ব্যাচ: অনির্বাণ'২৮ \n২৭ ব্যাচ: অপরাজেয়'২৭\n২৬ ব্যাচ: অদম্য'২৬ \n২৫ ব্যাচ: অনন্যা'২৫ \n২৪ ব্যাচ: উন্মেষ'২৪\n২৩ ব্যাচ: স্পন্দন'২৩\n২২ ব্যা",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 44
     },
     {
       "name": "Asmaul Husna Ohi",
@@ -7730,7 +7752,8 @@
       "active_days_count": 12,
       "max_msg_len": 77,
       "longest_msg_preview": "Hsc te Scholarship paile semester fee lage na... Eta ki true? Oneke boltesilo",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 45
     },
     {
       "name": "Zunayed Mahmood Tahsin",
@@ -7799,7 +7822,8 @@
       "active_days_count": 17,
       "max_msg_len": 176,
       "longest_msg_preview": "Acha, klk ki Asif sir er class tao cancel hower kono chance ache? Like, orientation sesh hote eto deri holo j sirer class time shuru hoye jache and amra classe jete parlam nah?",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 46
     },
     {
       "name": "Hritom Sarker Oyon",
@@ -7855,7 +7879,8 @@
       "active_days_count": 5,
       "max_msg_len": 361,
       "longest_msg_preview": "Guys you people are as much of a part of DU CSE as me, what I decide to do in future is uncertain and up to me. You dont have to safeguard a community from its own people like a golden apple. That was",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 47
     },
     {
       "name": "Meta AI",
@@ -7924,7 +7949,8 @@
       "active_days_count": 5,
       "max_msg_len": 0,
       "longest_msg_preview": "",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 48
     },
     {
       "name": "Afian Antik",
@@ -8006,7 +8032,8 @@
       "active_days_count": 10,
       "max_msg_len": 76,
       "longest_msg_preview": "klkeo ki cse er lab hobe naki ager week er moto 2hr theory porabe rana sir??",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 49
     },
     {
       "name": "Robiul Hasan",
@@ -8079,7 +8106,8 @@
       "active_days_count": 14,
       "max_msg_len": 45,
       "longest_msg_preview": "@Nabil agamikalker class time ta kindly janao",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 50
     },
     {
       "name": "Zarin Ahmed",
@@ -8148,7 +8176,8 @@
       "active_days_count": 1,
       "max_msg_len": 33,
       "longest_msg_preview": "Tumi eita bollea amra kih bolbo 🥹",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 51
     },
     {
       "name": "Jon Snow",
@@ -8204,7 +8233,8 @@
       "active_days_count": 5,
       "max_msg_len": 42,
       "longest_msg_preview": "Jon set his own nickname to Inzamam || 30.",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 52
     },
     {
       "name": "Piki Riko",
@@ -8251,7 +8281,8 @@
       "active_days_count": 3,
       "max_msg_len": 77,
       "longest_msg_preview": "Guys, Where is our class gonna be today...in the old building or the new one?",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 53
     },
     {
       "name": "Abdur Rahman",
@@ -8298,7 +8329,8 @@
       "active_days_count": 1,
       "max_msg_len": 53,
       "longest_msg_preview": "Abdur set his own nickname to Zunayed Mahmood Tahsin.",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 54
     },
     {
       "name": "Muhammad Abu Sayeed",
@@ -8345,7 +8377,8 @@
       "active_days_count": 1,
       "max_msg_len": 35,
       "longest_msg_preview": "Muhammad Abu Sayeed left the group.",
-      "archetype": "Casual Banterer"
+      "archetype": "Casual Banterer",
+      "rank": 55
     }
   ]
 }
